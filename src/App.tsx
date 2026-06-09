@@ -26,6 +26,11 @@ import { DocumentsPage } from './pages/documents/DocumentsPage';
 import { SettingsPage } from './pages/settings/SettingsPage';
 import { HelpPage } from './pages/help/HelpPage';
 import { DealsPage } from './pages/deals/DealsPage';
+import { SchedulePage } from './pages/features/SchedulePage';
+import { VideoCallPage } from './pages/features/VideoCallPage';
+import { DocumentChamberPage } from './pages/features/DocumentChamberPage';
+import { PaymentsPage } from './pages/features/PaymentsPage';
+import { SecurityPage } from './pages/features/SecurityPage';
 
 // Chat Pages
 import { ChatPage } from './pages/chat/ChatPage';
@@ -70,6 +75,23 @@ function App() {
           
           <Route path="/documents" element={<DashboardLayout />}>
             <Route index element={<DocumentsPage />} />
+            <Route path="chamber" element={<DocumentChamberPage />} />
+          </Route>
+          
+          <Route path="/schedule" element={<DashboardLayout />}>
+            <Route index element={<SchedulePage />} />
+          </Route>
+          
+          <Route path="/video-call" element={<DashboardLayout />}>
+            <Route index element={<VideoCallPage />} />
+          </Route>
+          
+          <Route path="/payments" element={<DashboardLayout />}>
+            <Route index element={<PaymentsPage />} />
+          </Route>
+          
+          <Route path="/security" element={<DashboardLayout />}>
+            <Route index element={<SecurityPage />} />
           </Route>
           
           <Route path="/settings" element={<DashboardLayout />}>
